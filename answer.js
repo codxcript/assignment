@@ -27,3 +27,13 @@ function getDayType(day){
 
     }
 }
+
+
+//question 3:
+
+function validateUsername(username){
+    if (username.length < 4) return "Too Short";
+    if (username.includes(" ") === true) return "No Space Allowed";
+    if (username.toLowerCase().includes("admin")) return "Reserved Word";
+    return "Available";
+}
