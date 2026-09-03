@@ -37,3 +37,19 @@ function validateUsername(username){
     if (username.toLowerCase().includes("admin")) return "Reserved Word";
     return "Available";
 }
+
+
+// question 4:
+
+
+function getCngFare(distance, isNight = false, waitingMinutes = 0){
+    let totalFare = 0;
+    if (distance > 2){
+        totalFare = 50 + (distance - 2) * 15;
+    }
+    else{totalFare = 50;}
+    if (isNight === true) totalFare *= 1.2;
+    if (waitingMinutes > 0) totalFare += waitingMinutes * 2;
+    return totalFare;
+} 
+
